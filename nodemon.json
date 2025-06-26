@@ -1,0 +1,29 @@
+{
+  "verbose": true,
+  "ignore": [
+    "node_modules/*",
+    ".git/*",
+    "logs/*",
+    "public/*",
+    "test/*"
+  ],
+  "watch": [
+    "*.js",
+    "**/*.js",
+    "*.json",
+    ".env"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json",
+  "delay": "500",
+  "execMap": {
+    "js": "node --trace-warnings"
+  },
+  "events": {
+    "restart": "node scripts/free-port.js"
+  },
+  "restartable": "rs",
+  "signal": "SIGTERM"
+} 
