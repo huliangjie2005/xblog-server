@@ -448,4 +448,52 @@
  *           { field: "email", message: "邮箱格式不正确" },
  *           { field: "password", message: "密码长度不能少于6位" }
  *         ]
+ *     
+ *     Announcement:
+ *       type: object
+ *       required:
+ *         - content
+ *       properties:
+ *         id:
+ *           type: integer
+ *           description: 公告ID
+ *         content:
+ *           type: string
+ *           description: 公告内容
+ *         type:
+ *           type: string
+ *           enum: [info, warning, error]
+ *           description: 公告类型(信息、警告、错误)
+ *         priority:
+ *           type: integer
+ *           description: 优先级(数字越大优先级越高)
+ *         status:
+ *           type: integer
+ *           description: 状态(1-启用, 0-禁用)
+ *         start_time:
+ *           type: string
+ *           format: date-time
+ *           description: 开始时间
+ *         end_time:
+ *           type: string
+ *           format: date-time
+ *           description: 结束时间
+ *         created_at:
+ *           type: string
+ *           format: date-time
+ *           description: 创建时间
+ *         updated_at:
+ *           type: string
+ *           format: date-time
+ *           description: 更新时间
+ *       example:
+ *         id: 1
+ *         content: "系统将于明天凌晨2点进行维护，预计停机1小时"
+ *         type: info
+ *         priority: 10
+ *         status: 1
+ *         start_time: 2024-01-01T00:00:00Z
+ *         end_time: 2024-01-10T23:59:59Z
+ *         created_at: 2024-01-01T08:00:00Z
+ *         updated_at: 2024-01-01T08:00:00Z
  */ 

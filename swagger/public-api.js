@@ -708,4 +708,34 @@
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
+ * /api/announcements/active:
+ *   get:
+ *     summary: 获取当前活跃的系统公告
+ *     tags: [系统公告]
+ *     description: 获取所有已启用且在有效期内的系统公告
+ *     responses:
+ *       200:
+ *         description: 获取成功
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Announcement'
+ *       500:
+ *         description: 服务器错误
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
  */ 
